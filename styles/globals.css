@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+.main:before {
+  background: white;
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("/assets/images/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+/* Tailwind Styles */
+
+.app {
+  @apply relative flex justify-center items-center flex-col max-w-full mx-auto;
+}
+
+.nike-container {
+  @apply px-20 w-full
+}
+
+.black_btn {
+  @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all text-center text-sm font-inter flex items-center justify-center;
+}
+
+.outline_btn {
+  @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all text-center text-sm font-inter flex items-center justify-center;
+}
+
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-slate-500;
+}
+
+.orange_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.green_gradient {
+  @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
+}
+
+.blue_gradient {
+  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-lg text-gray-600 max-w-2xl;
+}
+
+.search_input {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium;
+}
+
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/10 backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.glassmorphism {
+  @apply rounded-xl border border-gray-200 bg-white/20 backdrop-blur p-5;
+}
+
+.prompt_layout {
+  @apply space-y-6 py-8 columns-3;
+}
+
+/* Feed Component */
+.feed {
+  @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+}
+
+/* Form Component */
+.form_textarea {
+  @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+
+.form_input {
+  @apply w-full flex rounded-lg mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+
+/* Nav Component */
+.logo_text {
+  @apply font-satoshi font-semibold text-lg text-white tracking-wide;
+}
+
+.dropdown {
+  @apply absolute left-40 top-full mt-3 w-auto p-5 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 max-w-[210px] flex flex-col gap-2 justify-start items-start;
+}
+
+
+.dropdown_sub {
+  @apply absolute left-80 top-full mt-3 w-auto p-5 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 max-w-[210px] flex flex-col gap-2 justify-start items-start;
+}
+
+.dropdown_link {
+  @apply text-sm font-inter text-white font-medium;
+}
+
+/* PromptCard Component */
+.prompt_card {
+  @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter w-[360px] w-full h-fit;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+
+.text-gradient {
+  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
+      #def9fa 0.89%,
+      #bef3f5 17.23%,
+      #9dedf0 42.04%,
+      #7de7eb 55.12%,
+      #5ce1e6 71.54%,
+      #33bbcf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.text1-gradient {
+  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
+      #7387f5 0.89%,
+      #242d3f 17.23%,
+      #4556a0 42.04%,
+      #767d7e 55.12%,
+      #3616ee 71.54%,
+      #814ee0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+
+.bg-blue-gradient {
+  background: linear-gradient(157.81deg,
+      #def9fa -43.27%,
+      #bef3f5 -21.24%,
+      #9dedf0 12.19%,
+      #7de7eb 29.82%,
+      #5ce1e6 51.94%,
+      #33bbcf 90.29%);
+}
+
+.bg-black-gradient {
+  background: linear-gradient(144.39deg,
+      #ffffff -278.56%,
+      #6d6d6d -78.47%,
+      #11101d 91.61%);
+}
+
+.bg-black-gradient-2 {
+  background: linear-gradient(-168.39deg,
+      #ffffff -278.56%,
+      #6d6d6d -78.47%,
+      #11101d 91.61%);
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(153.47deg,
+      rgba(255, 255, 255, 0) -341.94%,
+      #14101d 95.11%);
+}
+
+.bg-discount-gradient {
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+}
+
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
+
+
+
+/* Scroll */
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-style::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(66, 245, 141) rgb(66, 245, 141);
+}
+
+.scroll-style::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.scroll-style::-webkit-scrollbar-track {
+  @apply bg-slate-700;
+}
+
+.scroll-style::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gradient-to-tr from-blue-500 to-green-500 via-teal-500;
+}
+
+/* Theme-Colors */
+.bg-theme {
+  background-image: linear-gradient(0.2deg, rgba(40, 173, 222, 1) 4.8%, rgb(27, 76, 224) 85.5%);
+}
+
+.bg-theme-cart {
+  @apply bg-gradient-to-b from-slate-900 to-gray-900 shadow-sm shadow-gray-900;
+}
+
+/* Clip-path */
+.clip-path {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
+}
+
+/* Blur-Effect */
+.blur-effect-theme {
+  @apply bg-white/50 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 opacity-100 shadow-sm shadow-slate-100 transition-all duration-300;
+}
+
+/* Icon Stles  md: h-5 sm:w-5 active: scale-110*/
+.icon-style {
+  @apply h-6 w-6 text-slate-100 cursor-pointer transition-all duration-100 leading-tight;
+}
+
+/* text-gradient */
+.text-gradient {
+  @apply text-transparent bg-clip-text bg-gradient-to-tr from-blue-500 to-sky-500;
+}
+
+/* border */
+.rounded-theme {
+  border-radius: 5% 100% 10% 5%;
+}
+
+/* button  active: scale-90  sm: text-sm*/
+.button-theme {
+  @apply px-7 py-1 rounded transition-all duration-100 ease-in-out shadow-md;
+}
+
+/* tranistions-theme */
+.transitions-theme {
+  @apply transition-all duration-700 ease-in-out cursor-pointer;
+}
+
+.btn {
+  @apply w-full max-w-[400px] py-[10px] px-[12px] rounded-[15px] border-none text-[20px] mt-[10px] uppercase bg-[#f02d34] text-[#fff] cursor-pointer scale-[1.2] transition-transform duration-[0.5s] ease-in-out
+}
