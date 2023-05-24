@@ -11,7 +11,7 @@ export const connectToDB = async () => {
   }
 
   try {
-    await mongoose.connect(process.env.MONGODB_URI, {
+    await mongoose.connect("mongodb+srv://Collins:2804@actscloud.0upxb.mongodb.net/tradekings?retryWrites=true&w=majority", {
       dbName: "tradekings",
       useNewUrlParser: true,
       useUnifiedTopology: true,
