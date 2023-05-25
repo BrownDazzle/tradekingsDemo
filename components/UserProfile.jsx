@@ -69,7 +69,7 @@ const UserProfile = ({ setOpenProfile }) => {
   ];
 
   return (
-    <div className="nav-item fixed right-1 top-16 bg-gradient-to-r from-cyan-500 to-blue-500  text-white  dark:bg-[#42464D] p-8 rounded-lg w-96 z-[250] ">
+    <div className="nav-item fixed right-1 top-16 bg-gradient-to-r from-cyan-500 to-blue-500  text-white  dark:bg-[#42464D] p-8 rounded-lg w-96 z-[250] overflow-y-scroll scroll-hidden">
       <div className="flex justify-end items-center">
         <button
           type="button"

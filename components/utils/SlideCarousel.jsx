@@ -23,11 +23,11 @@ const SlideCarousel = ({ items, handleButtonClick, activeCategory }) => {
 
     return (
         <div className="relative w-full">
-            <div ref={scrollContainer} className="flex flex-row space-x-4 overflow-x-scroll scroll-hidden px-25 md:px-10">
+            <div ref={scrollContainer} className="flex flex-row space-x-4 overflow-x-scroll scroll-hidden ">
                 {items?.map((item, i) => (
                     <button
                         key={item}
-                        className={`flex-shrink-0 text-md font-medium py-2 px-4 mx-2 rounded-md focus:outline-none ${i === activeCategory ? 'text-gray-800 bg-gray-100' : 'text-gray-500'
+                        className={`flex-shrink-0 text-md font-medium py-2 px-4 ml-10 rounded-md focus:outline-none ${i === activeCategory ? 'text-gray-800 bg-gray-100' : 'text-gray-500'
                             }`}
                         onClick={() => handleButtonClick(item, i)}
                     >

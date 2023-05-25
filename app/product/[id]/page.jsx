@@ -69,7 +69,7 @@ const ProductDetails = ({ params }) => {
                                 <img
                                     key={i}
                                     src={item.attributes.url}
-                                    className={i === index ? 'w-[90px] h-[90px] object-cover cursor-pointer rounded-xl transition-all duration-700 ease-in-out w-full hover:scale-105' : 'w-[70px] h-70px] cursor-pointer rounded-xl bg-[#ebebeb]'}
+                                    className={i === index ? 'w-[95px] h-[95px] object-cover cursor-pointer rounded-xl transition-all duration-700 ease-in-out hover:scale-105' : 'w-[70px] h-70px] cursor-pointer rounded-xl bg-[#ebebeb]'}
                                     onMouseEnter={() => setIndex(i)}
                                 />
                             ))}
