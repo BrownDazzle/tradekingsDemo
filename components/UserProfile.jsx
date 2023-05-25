@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
-import { MdOutlineCancel } from 'react-icons/md';
+import { MdOutlineCancel, MdOutlineProductionQuantityLimits } from 'react-icons/md';
 import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
 import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
 
@@ -34,6 +34,14 @@ const UserProfile = ({ setOpenProfile }) => {
 
 
   const userProfileData = [
+    {
+      icon: <MdOutlineProductionQuantityLimits />,
+      title: 'View Products',
+      desc: 'Available Products',
+      iconColor: '#03C9D7',
+      iconBg: '#E5FAFB',
+      link: "/products"
+    },
     {
       icon: <BsCurrencyDollar />,
       title: 'My Profile',

@@ -28,17 +28,17 @@ const Testimonial = ({ ifExists, endpoint: { title, heading, text, img, btn, url
     }
     return (
         <>
-            <div className={`flex items-center justify-between flex-col justify-center nike-container`}>
+            <div className={`flex items-center flex-col justify-center mb-9 sm:px-4 md:px-10 lg:px-20`}>
                 <div className='max-w-lg lg:max-w-none w-full md:text-center grid items-center lg:justify-items-center mb-5'>
-                    <h1 className='flex justify-center text-2xl lg:text-5xl md:text-4xl sm:text-3xl font-bold text-slate-700 mb-3'>{heading}</h1>
-                    <h1 className="lg:text-3xl md:text-2xl sm:text-1xl font-bold text-slate-500 filter drop-shadow-lg">
-                        Satisfying Our Customers Is Our Priority
+                    <h1 className='flex justify-center text-2xl lg:text-5xl md:text-4xl sm:text-1xl font-bold text-slate-700 mb-3'>{heading}</h1>
+                    <h1 className="flex justify-center flex-col lg:text-3xl md:text-2xl sm:text-1xl font-bold text-slate-500 filter drop-shadow-lg">
+                        <span className="flex justify-center">Satisfying Our Customers Is Our Priority </span>
                     </h1>
                     {/*} <a href={url} className="flex items-center justify-center mt-5" target={"_blank"} role="button">
                         <button onClick={handleShowMore} type='button' className='button-theme  bg-gradient-to-r from-cyan-500 to-blue-500 shadow-slate-900 text-slate-100 py-1.5'>{btn}</button>
     </a>*/}
                 </div>
-                <div className={`grid items-center justify-items-center gap-7 lg:gap-5 mb-10 mt-7 md:grid-cols-3 xl:grid-cols-3 sm:grid-cols-1`}>
+                <div className={`grid items-center justify-items-center gap-7 lg:gap-5 px-4 mt-7 md:grid-cols-3 xl:grid-cols-3 sm:grid-cols-1`}>
                     <img src='/assets/tk-images/customer1.jpg' className='w-full h-full rounded-[5%] object-cover transition-all duration-700 ease-in-out hover:scale-105' />
                     <img src='/assets/tk-images/customer2.jpg' className='w-full h-full rounded-[5%] object-cover transition-all duration-700 ease-in-out hover:scale-105' />
                     <img src='/assets/tk-images/customer4.jpg' className='w-full h-full rounded-[5%] object-cover transition-all duration-700 ease-in-out hover:scale-105' />

@@ -71,7 +71,7 @@ const News = () => {
     ];
 
     return (
-        <div className="flex flex-wrap justify-center">
+        <div id="news" className="flex flex-wrap justify-center">
             <div className='flex w-full justify-center items-center'>
                 <a href="" className="flex items-center justify-center mt-5">
                     <button type='button' className='button-theme  bg-gradient-to-r from-cyan-500 to-blue-500 shadow-slate-900 text-slate-100 py-1.5'>Latest News</button>

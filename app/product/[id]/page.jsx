@@ -59,12 +59,12 @@ const ProductDetails = ({ params }) => {
     return (
         <>
             <div className="w-full">
-                <div className={`flex items-center justify-between lg:flex-row lg:justify-center mt-20 mb-9 nike-container gap-[20px] flex-col`}>
+                <div className={`flex items-center justify-center lg:flex-row lg:justify-center mt-20 mb-9 px-5 md:px-10 lg:px-20 gap-[20px] flex-col`}>
                     <div className='max-w-lg lg:max-w-none w-full md:text-center grid items-center lg:justify-items-center md:mt-4'>
                         <div className="flex flex-col items-center justify-center w-full  ">
                             <img src={`/assets/tk-images/${cover}`} className='w-[400px] h-[400px] object-cover cursor-pointer rounded-xl ' />
                         </div>
-                        <div className="gap-4 mt-[40px] flex flex-row">
+                        <div className="gap-4 mt-[40px] flex flex-row w-full">
                             {ImgArray?.map((item, i) => (
                                 <img
                                     key={i}
@@ -75,24 +75,25 @@ const ProductDetails = ({ params }) => {
                             ))}
                         </div>
                     </div>
-                    <div className="mr-0 lg:mr-40">
-                        <h1 className="mt-5 text-2xl font-bold">{title}</h1>
-                        <div className="flex flex-row items-center">
-                            <div className="flex flex-row">
-                                <AiFillStar />
-                                <AiFillStar />
-                                <AiFillStar />
-                                <AiFillStar />
-                                <AiOutlineStar />
+                    <div className="flex justify-center">
+                        <div className="mr-0 lg:mr-30 w-full ">
+                            <h1 className="mt-5 text-2xl font-bold">{title}</h1>
+                            <div className="flex flex-row items-center">
+                                <div className="flex flex-row">
+                                    <AiFillStar />
+                                    <AiFillStar />
+                                    <AiFillStar />
+                                    <AiFillStar />
+                                    <AiOutlineStar />
+                                </div>
+                                <p className="text-[#324d67]">
+                                    (20)
+                                </p>
                             </div>
-                            <p className="text-[#324d67]">
-                                (20)
-                            </p>
-                        </div>
-                        <h4 className="text-2xl font-semibold">Details: </h4>
-                        <p>{desc}</p>
-                        <p className="text-2xl font-bold mt-[10px] text-[#f02d34]">K{""}{price}</p>
-                        {/*<div className="flex items-center mt-[10px] gap-[20px]">
+                            <h4 className="text-2xl font-semibold">Details: </h4>
+                            <p>{desc}</p>
+                            <p className="text-2xl font-bold mt-[10px] text-[#f02d34]">K{""}{price}</p>
+                            {/*<div className="flex items-center mt-[10px] gap-[20px]">
                             <h4 className="text-2xl font-semibold">Quantity:</h4>
                             <div className="flex items-center justify-around w-[100px]">
                                 <button type="button" onClick={() => dispatch(setDecreaseItemQTY({ _id, title, desc, cover, price, manufacturer, cartQuantity }))} className="bg-theme-cart rounded w-6 h-6 lg:w-5 lg:h-5 flex items-center justify-center active:scale-90">
@@ -104,23 +105,25 @@ const ProductDetails = ({ params }) => {
                                 </button>
                             </div>
                             </div>*/}
-                        <div className="flex items-center justify-between my-5 gap-3 w-full">
-                            <button
-                                type="button"
-                                className="bg-gradient-to-r from-cyan-500 to-blue-500 blur-effect-theme button-theme p-0.5 shadow shadow-sky-200"
-                                onClick={() => dispatch(setAddItemToCart({ _id, title, desc, cover, price, manufacturer, cartQuantity }))}
-                            >
-                                <FaOpencart className="icon-style text-slate-900" />
-                            </button>
-                            <button
-                                type="button"
-                                className="bg-gradient-to-l from-cyan-300 to-blue-300 blur-effect-theme button-theme px-2 py-1 shadow shadow-sky-200 font-medium text-sm text-slate-100 "
-                                onClick={() => { onAddToCart(); onCartToggle(); }}
-                            >
-                                Buy Now
-                            </button>
+                            <div className="flex items-center justify-start my-5 gap-3 w-full">
+                                <button
+                                    type="button"
+                                    className="bg-gradient-to-r from-cyan-500 to-blue-500 blur-effect-theme button-theme p-0.5 shadow shadow-sky-200"
+                                    onClick={() => dispatch(setAddItemToCart({ _id, title, desc, cover, price, manufacturer, cartQuantity }))}
+                                >
+                                    <FaOpencart className="icon-style text-slate-900" />
+                                </button>
+                                <button
+                                    type="button"
+                                    className="bg-gradient-to-l from-cyan-300 to-blue-300 blur-effect-theme button-theme px-2 py-1 shadow shadow-sky-200 font-medium text-sm text-slate-100 "
+                                    onClick={() => { onAddToCart(); onCartToggle(); }}
+                                >
+                                    Buy Now
+                                </button>
+                            </div>
                         </div>
                     </div>
+
                 </div>
                 <Testimonial endpoint={highlight} />
             </div>

@@ -91,31 +91,30 @@ const Navbar = () => {
             <header className={'fixed top-0 left-0 right-0 h-[9vh] flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 z-[200] w-full'
             }
             >
-                <nav className='flex items-center justify-between w-full px-10'>
+                <nav className='flex items-center justify-between w-full px-4 md:px-6 lg:px-10'>
                     <div className='flex justify-start items-center'>
                         <Link href='/' className='flex gap-2 flex-center'>
                             <Image
                                 src='/assets/logos/tk_logo.jpg'
                                 alt='logo'
-                                width={55}
-                                height={55}
-                                className='object-contain rounded-full'
+                                width={45}
+                                height={45}
+                                className='object-cover rounded-full '
                             />
                             {/* <p className='font-satoshi text-1xl font-semibold text-gray-100'>Trade Kings</p>*/}
                         </Link>
-                        <div className='ml-10 flex  items-center justify-start '>
+                        <div className='sm:flex hidden ml-10'>'
 
-                            <a href="/products" className='flex flex-row text-white font-semibold text-sm mr-8 cursor-pointer'>View Products</a>
-
-                            <div className='grid items-center'>
-                                <MagnifyingGlassIcon onClick={onSearchToggle} className={`icon-style ${navState && "text-slate-900 transition-all duration-300"}`} />
-                            </div>
-
+                            <a href="/products" className='flex flex-row text-white font-semibold text-sm mr-8 cursor-pointer'>Products</a>
+                            <a href="#news" className='flex flex-row text-white font-semibold text-sm mr-8 cursor-pointer'>News</a>
                         </div>
                     </div>
 
                     <ul className='flex items-center justify-center gap-2'>
                         <li className='grid items-center'>
+                            <MagnifyingGlassIcon onClick={onSearchToggle} className={`icon-style ${navState && "text-slate-900 transition-all duration-300"}`} />
+                        </li>
+                        <li className='grid items-center mr-5'>
                             <button type='button' onClick={() => onCartToggle()} className='border-none outline-none active:scale-110 transition-all duration-300 relative'>
                                 <FaOpencart className={`icon-style ${navState && "text-slate-900 transition-all duration-300"}`} />
                                 <div className={`absolute top-5 right-0 shadow w-4 h-4 text-[0.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 ${navState ? 'bg-slate-900 text-slate-100 shadow-slate-900' : 'bg-slate-100 text-slate-900 shadow-slate-100'}`}>{totalQTY}</div>
@@ -150,7 +149,7 @@ const Navbar = () => {
                                     onClick={() => setOpenProfile(true)}
                                 >
                                     <img
-                                        className="rounded-full w-12 h-12 object-cover"
+                                        className="rounded-full w-8 h-8 object-cover"
                                         src="/assets/assets/people02.png"
                                         alt="user-profile"
                                     />

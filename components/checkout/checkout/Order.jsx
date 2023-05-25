@@ -19,19 +19,19 @@ function Order() {
 
     return (
         <div >
-            <div className="w-full mx-auto text-gray-800 font-light mb-6 border-b border-gray-200 pb-6">
+            <div className="w-full text-gray-800 font-light mb-6 border-b border-gray-200 pb-6">
                 {cartItems?.map((item, i) => (
                     <div className="w-full flex items-center" key={i}>
                         <div className="overflow-hidden rounded-lg w-16 h-16 bg-gray-50 border border-gray-200">
                             <img src={`/assets/tk-images/${item.cover}`} alt="" className='w-full h-full object-cover' />
                         </div>
-                        <div>
-                            <div className="flex-grow pl-3">
+                        <div className='pl-3'>
+                            <div className="flex-grow ">
                                 <h6 className="font-semibold uppercase text-gray-600">{item.title}</h6>
                             </div>
-                            <div className='flex flex-col items-center justify-between'>
+                            <div className='flex flex-col items-center justify-start'>
                                 <p className="text-gray-400">Quantity: x {item.cartQuantity}</p>
-                                <span className="font-semibold text-gray-600 text-md">ZMW{item.price}.00</span>
+                                <p className="font-semibold text-gray-600 text-md">K{item.price}.00</p>
                             </div>
                         </div>
 
@@ -45,7 +45,7 @@ function Order() {
                         <span className="text-gray-600">Subtotal</span>
                     </div>
                     <div className="pl-3">
-                        <span className="font-semibold">ZMW{totalAmount}</span>
+                        <span className="font-semibold">K{totalAmount}</span>
                     </div>
                 </div>
                 <div className="w-full flex items-center">
@@ -53,7 +53,7 @@ function Order() {
                         <span className="text-gray-600">Shipping fee (LOCAL)</span>
                     </div>
                     <div className="pl-3">
-                        <span className="font-semibold">ZMW19.09</span>
+                        <span className="font-semibold">K19.09</span>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@ function Order() {
                         <span className="text-gray-600">Total</span>
                     </div>
                     <div className="pl-3">
-                        <span className="font-semibold text-gray-400 text-sm">ZMW</span> <span className="font-semibold">ZMW{totalAmount}</span>
+                        <span className="font-semibold">K{totalAmount}</span>
                     </div>
                 </div>
             </div>

@@ -110,35 +110,35 @@ function ProductList({ ifExists }) {
 
 
     return (
-        <div className='w-full px-20'>
-            <div className='flex mb-5 mt-20 items-center justify-between w-full'>
-                <div className='flex  flex-col w-full'>
+        <div className='w-full px-0 md:px-10 lg:px-20'>
+            <div className='flex mb-5 px-5 mt-20 items-center justify-between w-full'>
+                <div className='w-full'>
                     <SlideCarousel items={productCategory} handleButtonClick={handleButtonClick} activeCategory={activeCategory} handlePrevClick={handlePrevClick} handleNextClick={handleNextClick} />
                 </div>
             </div>
             <div className='flex justify-center flex-col w-full'>
                 <div className='flex mb-5 items-center justify-between'>
 
-                    <div className='flex justify-between align-center w-full lg:px-20'>
-                        <div className='m-[20px]'>
-                            <span className='mr-[20px] text-sm font-semibold'>Manufacturer:</span>
-                            <select className='p-[10px] mr-[20px] outline-none text-md' name="color" onChange={handleFilters}>
+                    <div className='flex justify-between align-center w-full px-5 md:px-10 lg:px-20'>
+                        <div className='flex flex-row items-center justify-center'>
+                            {/*<span className='text-sm font-semibold sm:hidden'>Manufacturer:</span>*/}
+                            <select className='p-[2px] outline-none text-md' name="color" onChange={handleFilters}>
                                 <option default disabled>Company</option>
                                 {companyCategory.map((manufacturer, i) => (
                                     <option key={i}>{manufacturer}</option>
                                 ))}
                             </select >
                         </div>
-                        <div className='m-[20px]'>
-                            <span className='text-sm font-semibold'>Sort Price:</span>
-                            <select className='p-[10px] outline-none text-md' onChange={(e) => handleSorts(e)}>
+                        <div className='flex flex-row items-center justify-center'>
+                            <span className='text-sm font-semibold'>Sort:</span>
+                            <select className='p-[2px] outline-none text-md' onChange={(e) => handleSorts(e)}>
                                 <option value="asc">Price (asc)</option>
                                 <option value="desc">Price (desc)</option>
                             </select>
                         </div>
                     </div>
                 </div>
-                <div className={`grid items-center justify-items-center gap-7 lg:gap-5 mb-10 mt-7 md:grid-cols-2 xl:grid-cols-4 sm:grid-cols-1 nike-container`}>
+                <div className={`grid items-center justify-items-center gap-7 lg:gap-5 mb-10 mt-7 md:grid-cols-2 xl:grid-cols-4 sm:grid-cols-1 px-5 md:px-10 lg:px-20`}>
                     {data?.length !== 0 ? (data?.slice(0, displayCount).map((item, i) => (
                         <Item {...item} key={i} ifExists={ifExists} />
                     ))) : (

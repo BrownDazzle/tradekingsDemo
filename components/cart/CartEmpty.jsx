@@ -9,7 +9,7 @@ const CartEmpty = ({ onCartToggle }) => {
     <>
       <div className='flex items-center justify-center flex-col h-screen px-11 text-center gap-7'>
         <img
-          src="/assets/emptybag.png"
+          src="/assets/tk-images/emptyBag.png"
           alt="emptybag/img"
           className='w-40 lg:w-36 sm:w-28 h-auto object-fill transition-all duration-300 hover:scale-110'
         />

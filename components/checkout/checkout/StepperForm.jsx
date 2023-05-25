@@ -104,15 +104,13 @@ const StepperForm = () => {
                 <div>
                     <h2 className="text-xl font-semibold mb-4 mt-10">Step 1: Adress Information</h2>
                     <form onSubmit={nextStep}>
-                        <h5 className="text-[18px] font-[500]">Shipping Address</h5>
-                        <br />
                         <div className="w-full flex flex-row md:flex-col pb-3">
-                            <div className="w-[50%] md:w-full">
+                            <div className="w-full">
                                 <label className="block pb-2">First Name</label>
                                 <input type="text" required className={`w-full focus:outline-none focus:ring focus:ring-cyan-700 border p-1 rounded-[5px] !w-[95%]`} value={shippingAddress.firstName} id="firstName"
                                     name="firstName" onChange={(e) => handleChange(e)} />
                             </div>
-                            <div className="w-[50%] md:w-full">
+                            <div className="w-full">
                                 <label className="block pb-2">Last Name</label>
                                 <input type="text" required className={`w-full focus:outline-none focus:ring focus:ring-cyan-700 border p-1 rounded-[5px] !w-[95%]`} value={shippingAddress.lastName} id="lastName"
                                     name="lastName" onChange={(e) => handleChange(e)} />
@@ -120,7 +118,7 @@ const StepperForm = () => {
                         </div>
 
                         <div className="w-full flex flex-row md:flex-col pb-3">
-                            <div className="w-[50%] md:w-full">
+                            <div className="w-full">
                                 <label className="block pb-2">Phone Number</label>
                                 <input
                                     type="number"
@@ -132,7 +130,7 @@ const StepperForm = () => {
                                     onChange={(e) => handleChange(e)}
                                 />
                             </div>
-                            <div className="w-[50%] md:w-full">
+                            <div className="w-full">
                                 <label className="block pb-2">Email Address</label>
                                 <input type="email" id="email"
                                     name="email" required className={`w-full focus:outline-none focus:ring focus:ring-cyan-700 border p-1 rounded-[5px] !w-[95%]`} value={shippingAddress?.email} onChange={(e) => handleChange(e)} />
@@ -140,7 +138,7 @@ const StepperForm = () => {
                         </div>
 
                         <div className="w-full flex flex-row md:flex-col pb-3">
-                            <div className="w-[50%] md:w-full">
+                            <div className="w-full">
                                 <label className="block pb-2">Country</label>
                                 <select
                                     className="w-[95%] focus:outline-none focus:ring focus:ring-cyan-700 border h-[40px] rounded-[5px]"
@@ -160,8 +158,8 @@ const StepperForm = () => {
                                         ))}
                                 </select>
                             </div>
-                            <div className="w-[50%] md:w-full">
-                                <label className="block pb-2">Country</label>
+                            <div className="w-full">
+                                <label className="block pb-2">City</label>
                                 <select id="city"
                                     name="city" className="w-[95%] focus:outline-none focus:ring focus:ring-cyan-700 border h-[40px] rounded-[5px]" onChange={(e) => handleChange(e)}>
                                     <option className="block pb-2" value={shippingAddress.city} >
@@ -178,7 +176,7 @@ const StepperForm = () => {
                         </div>
 
                         <div className="w-full flex flex-row md:flex-col pb-3">
-                            <div className="w-[50%] md:w-full">
+                            <div className="w-full">
                                 <label className="block pb-2">Address</label>
                                 <input
                                     type="address"
@@ -190,7 +188,7 @@ const StepperForm = () => {
                                     onChange={(e) => handleChange(e)}
                                 />
                             </div>
-                            <div className="w-[50%] md:w-full">
+                            <div className="w-full">
                                 <label className="block pb-2">Zip Code</label>
                                 <input type="number" id="zipCode"
                                     name="zipCode" required className={`w-full focus:outline-none focus:ring focus:ring-cyan-700 border p-1 rounded-[5px] !w-[95%]`} value={shippingAddress.zipCode} onChange={(e) => handleChange(e)} />
