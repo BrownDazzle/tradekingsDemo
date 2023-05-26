@@ -13,10 +13,10 @@ const Footer = () => (
           </h1>
         </div>
 
-        <p className={`font-normal text-white text-[18px] sm:text-[12px] leading-[30.8px] mt-1`}>
+        <p className={`font-normal text-white sm:text-[12px] md:text-[14px] lg:text-[18px] leading-[30.8px] mt-1`}>
           Trade Kings is a leading manufacturing company in Zambia that produces a wide range of consumer goods.
         </p>
-        <p className={`font-normal text-white text-[16px] sm:text-[8px] leading-[30.8px] mt-1`} >Plot No. 29381, Nampundwe Road, Light Industrial Area, Lusaka Zambia</p>
+        <p className={`font-normal text-white sm:text-[8px] md:text-[12px] lg:text-[14px] leading-[30.8px] mt-1`} >Plot No. 29381, Nampundwe Road, Light Industrial Area, Lusaka Zambia</p>
       </div >
 
       <div className="w-full flex flex-row justify-center flex-wrap md:mt-0 mt-2 px-4 ">

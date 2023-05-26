@@ -66,7 +66,7 @@ const Cart = () => {
                 <h1 className="text-base font-semibold uppercase">SubTotal</h1>
                 <h1 className="text-sm rounded bg-gradient-to-r from-cyan-500 to-blue-500 text-slate-100 px-1 py-0.5">K{totalAmount}</h1>
               </div>
-              <div className="grid items-center gap-2 mb-10">
+              <div className="grid items-center gap-2 mb-10 sm:mb-20">
                 <p className="text-sm font-medium text-center">Taxes and Shipping Will Calculate At Shipping</p>
                 <a href="/checkout" className="flex justify-center items-center button-theme bg-gradient-to-r from-cyan-500 to-blue-500 text-white" onClick={onCartToggle}>Process payment</a>
               </div>

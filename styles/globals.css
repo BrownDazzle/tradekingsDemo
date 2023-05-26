@@ -73,7 +73,7 @@
 /* Tailwind Styles */
 
 .app {
-  @apply relative flex justify-center items-center flex-col max-w-full mx-auto;
+  @apply relative flex justify-center items-center flex-col max-w-full;
 }
 
 .nike-container {
